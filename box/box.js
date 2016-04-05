@@ -384,7 +384,7 @@ module.exports = function(RED) {
             });
             var interval = setInterval(function() {
                 node.emit("input", {});
-            }, 900000); // 15 minutes
+            }, 350); // 15 minutes
             node.on("close", function() {
                 if (interval !== null) {
                     clearInterval(interval);
